@@ -1,0 +1,9 @@
+--- 
+- name: copy jar file to tomcat.
+  hosts: dev 
+  gather_facts: false  
+  tasks:
+    - name: copy jar file to tomcat.
+      copy:
+        src: /var/lib/jenkins/workspace/test-final/sagan-renderer/build/libs/sagan-renderer-1.0.0-SNAPSHOT.jar 
+        dest: /opt/apache-tomcat-9.0.30/webapps
